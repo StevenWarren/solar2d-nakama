@@ -201,6 +201,7 @@ end
 
 --- Send message on Nakama socket
 -- @param socket The client socket to use when sending the message
+-- @param message The message to send
 -- @param callback Optional callback to invoke with the result
 -- @return If not callback is provided the function returns the result
 function M.socket_send(socket, message, callback)
