@@ -102,3 +102,4 @@ $RECYCLE.BIN/
 
 .cookie
 api.swagger.json
+build/
