@@ -15,6 +15,31 @@ You'll need to setup the server and database before you can connect with the cli
 1. Install and run the servers. Follow these [instructions](https://heroiclabs.com/docs/install-docker-quickstart).
 
 2. Add the plugin to your project.
+    Add to your projects build.settings file.
+    ```lua
+    plugins =
+    {
+        -- External dependencies for Nakama
+        ["plugin.bit"] =
+        {
+            publisherId = "com.coronalabs"
+        },
+        ["plugin.openssl"] =
+        {
+            publisherId = "com.coronalabs",
+        },
+        -- Nakama plugin from Github repo
+        ["plugin.nakama"] =
+		{
+			publisherId="com.manicapps",
+			supportedPlatforms = {
+				android = { url="https://github.com/StevenWarren/solar2d-nakama/releases/download/v1.0.0-alpha/plugin-Nakama.zip"},
+				["mac-sim"] = { url="https://github.com/StevenWarren/solar2d-nakama/releases/download/v1.0.0-alpha/plugin-Nakama.zip" }, 
+				["win32-sim"] = { url="https://github.com/StevenWarren/solar2d-nakama/releases/download/v1.0.0-alpha/plugin-Nakama.zip" }
+			}
+		},
+    },
+    ```
 
 3. Use the connection credentials to initialise the nakama client.
 
