@@ -4,8 +4,9 @@ local json = require "plugin.nakama.util.json"
 local log = require "plugin.nakama.util.log"
 local async = require "plugin.nakama.util.async"
 local api_session = require "plugin.nakama.session"
-
-local M = {}
+-- Create library
+local Library = require( "CoronaLibrary" )
+local M = Library:new{ name = "plugin.nakama", publisherId = "com.manicapps" }
 
 --------------------------------------------------------------------------------
 --- create_group_user_list_group_user
